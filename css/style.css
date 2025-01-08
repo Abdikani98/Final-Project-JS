@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #2B124C;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10%;
+}
+header ul{
+     background-color: blueviolet;
+     padding: 50px 30px;
+     border-radius: 20px;
+     margin-top: 20px;
+    
+     
+}
+
+
+#nav{
+    padding-top: 20%;
+    text-align: center;
+    color: white;
+    font-size: 4em;
+}
+
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-right: 600px;
+
+}
+ul li{
+    display: inline-block;
+    margin-top: 30px;
+    box-shadow: 5PX 5PX 10PX;
+    
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    border: 1 solid transparent;
+    padding: 14px 20px;
+    transition: 1.5s;
+    font-size: 2em;
+    
+}
+ul li a:hover{
+    background-color: #6DA5CD;
+    color: black;
+    transition: 1.2s;
+    border-radius: 20px;
+}
+.submenu{
+    display: none;
+}
+ul li:hover .submenu{
+    display: block;
+    position: absolute;
+    margin-right: 300px;
+}
+
+.active{
+    background-color: #6DA5CD;
+    color: black;
+}
+.imge{
+    padding-top: 10%;
+    padding-left: 600px;
+    color: white;
+}
+.imge h1{
+    font-size: 2em;
+}
+.imge h4{
+    font-size: 1.5em;
+}
+.imge h5{
+    font-size: 1.8em;
+}
+span{
+    color: orangered;
+}
+.imge img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.button1{
+    background-color: rgb(226, 218, 242);
+    padding: 15px 0px;
+    width: 690px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px;
+    animation-name: anim1;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    margin-left: 25%;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+@keyframes anim1{
+    0%{
+        transform: scale(-400px);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+.button1:hover{
+    background-color: white;
+    color: red;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px;
+    transition: 1.2s;
+    animation-name: anim1;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+@keyframes anim1{
+    0%{
+        transform: scale(-400px);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+.text p{
+    margin-left: 20%;
+    font-size: 1.4em;
+    color: white;
+}
+.text h2{
+    text-shadow: 4px 4px 10px black;
+    font-size: 2em;
+    animation-name: anim1;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    margin-left: 20%;
+}
+
+@keyframes anim1{
+    0%{
+        transform: translatex(-400px);
+    }
+    100%{
+        transform: translatex(0);
+    }
+}
+
+
+
+
+/* Assignment contents */
+
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+} */
+
+.calculator {
+    width: 360px;
+    background-color: brown;
+    border-radius: 10px;
+    box-shadow: 20px 20px 40px black;
+    padding: 20px;
+    
+}
+
+.display {
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+    text-align: right;
+    font-style: italic;
+    border: none;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+
+.button:hover {
+    background-color: #efb838;
+}
+
+.equal {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.equal:hover {
+    background-color: #d7c32c;
+}
+
+
+/*chapter2*/
+
+.text{
+    color: white;
+    padding-top: 10%;
+    padding-left: 30px;
+    background-color: #2B124C;
+    padding-bottom: 20px;
+}
+.text h2{
+    font-size: 2em;
+}
+H1{
+    padding-bottom: 20PX;
+}
+
+
+
+#All{
+    background-color: blueviolet;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.5em;
+
+}
+.text input{
+   
+    gap: 70px;
+    padding-top: 10px;
+    padding-left: 30px;
+   
+    
+}

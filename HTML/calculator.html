@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../javascript/main.js"></script>
+</head>
+<body>
+    
+
+    <header>
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#">Chapters</a>
+            
+            <div  class="submenu">
+                <ul>
+                    <li><a href="chapter1.html">Chapter1</a></li>
+                    <li><a href="chapter2.html">Chapter2</a></li>
+                    <li><a href="chapter3.html">Chapter3</a></li>
+                    <li><a href="chapter4.html">Chapter4</a></li>
+                </ul>
+            </div>
+
+            </li>
+            <li><a href="About.html">About us</a></li>
+            <li><a href="#">Assignments</a>
+            
+            
+                <div  class="submenu">
+                    <ul>
+                        <li><a href="calculator.html" target="_parent">Calculator</a></li>
+                        <li><a href="assignment2.html">assignment2</a></li>
+                        
+                     
+                    </ul>
+                </div>
+            
+            </li>
+        </ul>
+    
+</header>
+    
+<div class="calculator">
+    <input type="text" id="display" class="display" disabled>
+    <div class="buttons">
+        <button class="button" onclick="appendToDisplay('1')">1</button>
+        <button class="button" onclick="appendToDisplay('2')">2</button>
+        <button class="button" onclick="appendToDisplay('3')">3</button>
+        <button class="button" onclick="appendToDisplay('+')">+</button>
+
+        <button class="button" onclick="appendToDisplay('4')">4</button>
+        <button class="button" onclick="appendToDisplay('5')">5</button>
+        <button class="button" onclick="appendToDisplay('6')">6</button>
+        <button class="button" onclick="appendToDisplay('-')">-</button>
+
+        <button class="button" onclick="appendToDisplay('7')">7</button>
+        <button class="button" onclick="appendToDisplay('8')">8</button>
+        <button class="button" onclick="appendToDisplay('9')">9</button>
+        <button class="button" onclick="appendToDisplay('*')">*</button>
+
+        <button class="button" onclick="appendToDisplay('0')">0</button>
+        <button class="button" onclick="clearDisplay()">C</button>
+        <button class="button" onclick="appendToDisplay('.')">.</button>
+        <button class="button" onclick="appendToDisplay('/')">/</button>
+
+        <button class="button equal" onclick="calculateResult()">=</button>
+    </div>
+</div>
+
+    <footer>
+        <div>
+            <p id="All">&copy; copyright All  Abdikani</p>
+    </div>
+    </footer>
+</body>
+</html>
