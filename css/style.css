@@ -1,95 +1,101 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: #2B124C;
     width: 100%;
     height: 100%;
     margin-bottom: 10%;
 }
-header ul{
-     background-color: blueviolet;
-     padding: 50px 30px;
-     border-radius: 20px;
-     margin-top: 20px;
-    
-     
+
+header ul {
+    background-color: blueviolet;
+    padding: 50px 30px;
+    border-radius: 20px;
+    margin-top: 20px;
 }
 
-
-#nav{
+#nav {
     padding-top: 20%;
     text-align: center;
     color: white;
     font-size: 4em;
 }
 
-
-ul{
+ul {
     float: right;
     list-style-type: none;
     margin-right: 600px;
-
 }
-ul li{
+
+ul li {
     display: inline-block;
     margin-top: 30px;
-    box-shadow: 5PX 5PX 10PX;
-    
+    box-shadow: 5px 5px 10px;
 }
-ul li a{
+
+ul li a {
     text-decoration: none;
     color: white;
     border: 1 solid transparent;
     padding: 14px 20px;
     transition: 1.5s;
     font-size: 2em;
-    
 }
-ul li a:hover{
+
+ul li a:hover {
     background-color: #6DA5CD;
     color: black;
     transition: 1.2s;
     border-radius: 20px;
 }
-.submenu{
+
+.submenu {
     display: none;
 }
-ul li:hover .submenu{
+
+ul li:hover .submenu {
     display: block;
     position: absolute;
     margin-right: 300px;
 }
 
-.active{
+.active {
     background-color: #6DA5CD;
     color: black;
 }
-.imge{
+
+.imge {
     padding-top: 10%;
     padding-left: 600px;
     color: white;
 }
-.imge h1{
+
+.imge h1 {
     font-size: 2em;
 }
-.imge h4{
+
+.imge h4 {
     font-size: 1.5em;
 }
-.imge h5{
+
+.imge h5 {
     font-size: 1.8em;
 }
-span{
+
+span {
     color: orangered;
 }
-.imge img{
+
+.imge img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
 }
 
-.button1{
+.button1 {
     background-color: rgb(226, 218, 242);
     padding: 15px 0px;
     width: 690px;
@@ -98,22 +104,24 @@ span{
     box-shadow: 5px 5px 10px;
     animation-name: anim1;
     animation-duration: 2s;
-    animation-delay: 2s;
+    animation-delay: 0.3s;
     margin-left: 25%;
     margin-bottom: 50px;
     margin-top: 20px;
     font-size: 1.3em;
     font-weight: bold;
 }
-@keyframes anim1{
-    0%{
-        transform: scale(-400px);
-    }
-    100%{
+
+@keyframes anim1 {
+    0% {
         transform: scale(0);
     }
+    100% {
+        transform: scale(100px);
+    }
 }
-.button1:hover{
+
+.button1:hover {
     background-color: white;
     color: red;
     border-radius: 30px;
@@ -121,56 +129,23 @@ span{
     transition: 1.2s;
     animation-name: anim1;
     animation-duration: 2s;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
-@keyframes anim1{
-    0%{
-        transform: scale(-400px);
-    }
-    100%{
-        transform: scale(0);
-    }
-}
-.text p{
+
+.text p {
     margin-left: 20%;
     font-size: 1.4em;
     color: white;
 }
-.text h2{
+
+.text h2 {
     text-shadow: 4px 4px 10px black;
     font-size: 2em;
     animation-name: anim1;
     animation-duration: 2s;
-    animation-delay: 2s;
+    animation-delay: 0.3s;
     margin-left: 20%;
 }
-
-@keyframes anim1{
-    0%{
-        transform: translatex(-400px);
-    }
-    100%{
-        transform: translatex(0);
-    }
-}
-
-
-
-
-/* Assignment contents */
-
-
-
-
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: teal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-} */
 
 .calculator {
     width: 360px;
@@ -178,6 +153,7 @@ span{
     border-radius: 10px;
     box-shadow: 20px 20px 40px black;
     padding: 20px;
+   
     
 }
 
@@ -192,7 +168,6 @@ span{
     margin-bottom: 20px;
     padding: 5px;
     border-radius: 5px;
-    
 }
 
 .buttons {
@@ -208,7 +183,7 @@ span{
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-    transition:  0.3s ease;
+    transition: 0.3s ease;
 }
 
 .button:hover {
@@ -224,26 +199,23 @@ span{
     background-color: #d7c32c;
 }
 
-
-/*chapter2*/
-
-.text{
+.text {
     color: white;
     padding-top: 10%;
     padding-left: 30px;
     background-color: #2B124C;
     padding-bottom: 20px;
 }
-.text h2{
+
+.text h2 {
     font-size: 2em;
 }
-H1{
-    padding-bottom: 20PX;
+
+h1 {
+    padding-bottom: 20px;
 }
 
-
-
-#All{
+#All {
     background-color: blueviolet;
     position: fixed;
     bottom: 0;
@@ -253,13 +225,66 @@ H1{
     text-align: center;
     padding-top: 20px;
     font-size: 1.5em;
-
 }
-.text input{
-   
+
+.text input {
     gap: 70px;
     padding-top: 10px;
     padding-left: 30px;
-   
-    
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header ul {
+        padding: 20px 10px;
+        border-radius: 10px;
+    }
+    ul {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+    }
+    ul li {
+        display: block;
+        margin-top: 10px;
+    }
+    ul li a {
+        font-size: 1.5em;
+    }
+    .imge {
+        padding-left: 0;
+        text-align: center;
+    }
+    .imge img {
+        width: 200px;
+        height: 200px;
+    }
+    .button1 {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 1em;
+        height: auto;
+    }
+    .calculator {
+        width: 90%;
+        padding: 10px;
+    }
+    .display {
+        font-size: 20px;
+        height: 30px;
+    }
+    .button {
+        padding: 15px;
+        font-size: 16px;
+    }
+    #All {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+    .text h2,
+    .text p {
+        font-size: 1em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
