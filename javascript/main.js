@@ -451,127 +451,7 @@ function sayhello(){
  //console.log("After the update : ",fruit5);
  }
  
- 
- 
- 
- //Filter
- // let n = [1,2,3,4,5,6,7,8,9];
- 
- // let Filtered = n.filter(function fill(t){
- //    return t>=5
- // })
- // console.log(Filtered)
- 
- 
- 
- // FILTER: Iska ururinta tirooyinka labada la qeybsan karo
- // const numbers1 = [1, 2, 3, 4, 5];
- // function isEven(num) {
- //     return num % 2 === 0;
- // }
- // const evens = numbers1.filter(isEven);
- //console.log(evens); 
- 
- 
- 
- // REDUCE: Isugeynta dhammaan waxyaabaha ku jira liiska
- // const numbers2 = [1, 2, 3, 4, 5];
- // function add(total, num) {
- //     return total + num;
- // }
- // const sum = numbers2.reduce(add, 0);
- //console.log(sum); 
- 
- 
- 
- 
- // SOME: Hubinta haddii liiska uu leeyahay qiyamka ka weyn 3
- // const numbers3 = [1, 2, 3, 4, 5];
- // function isGreaterThanThree(num) {
- //     return num > 3;
- // }
- // const hasLargeNumber = numbers3.some(isGreaterThanThree);
- //console.log(hasLargeNumber); 
- 
- 
- 
- 
- 
- // const numbers4 = [1, 2, 3, 4, 5];
- // function isLessThanTen(num) {
- //     return num < 10;
- // }
- // const allSmall = numbers4.every(isLessThanTen);
- //console.log(allSmall); 
- 
- 
- 
- //OBJECT
- 
- // const person1 ={
- //    firstName: "Abdikani",
- //    lastName: "Mohamud",
- //    age:10
- // }
- //console.log(person1)
- 
- 
- 
- // function Person(firstName, lastName,age){
- //    this.firstName =firstName;
- //    this.lastName =lastName;
- //    this.age =age;
- // }
- // const person =new Person("Abdikani", "Mohamud", 19)
- //console.log(person)
- 
- 
- // const person2 ={
- //    name:"abdikani",
- //    educ_level: "master",
- //    gra_status: "Active"
- // }
- // for(let index in person2){
-    //console.log(`${index}: ${person2[index]}`)
- //}
- 
- //JSON
- // const person3 ={
- //    "name": "abdi",
- //    "age": "19"
- // }
- //console.log(person3)
- 
- 
- 
- // const person4={
- //    "person":{
- //       "name": "abdi",
- //       "age": "19"
- //    },
- //    "hobbies": ["reciting quran","praying","reading","swimming"]
- // }
- //console.log(person4)
- //console.log(person4.person)
- //console.log(person4.hobbies)
- 
- 
- 
- 
- //JSON string
- // const person0 ={
- //    "name": "abdi",
- //    "age": "19"
- // }
- //console.log(person0)
- 
- 
- 
- 
- 
- 
- 
- 
+
  function filterEvens() {
     const numbers1 = [1, 2, 3, 4, 5];
     function isEven(num) {
@@ -892,8 +772,125 @@ function tempreture(){
 }
 
 
+//MY CHALLANGE
+
+//tasbiix
+
+let value = document.querySelector("#value")
+let increment = document.querySelector("#incr")
+let reset = document.querySelector("#reset")
+let decrement = document.querySelector("#decr")
+let div = document.querySelector("#div")
 
 
+let startValue = 0;
+
+increment.addEventListener("click", () => {
+    startValue ++;
+    value.innerHTML = startValue
+
+    // if(startValue==10){
+    //     value.style.color = "red"
+    // }else{
+    //      value.style.color = "black"
+    // }
+
+    // if(startValue==20){
+    //     div.style.backgroundColor = "red"
+    // }else{
+    //     div.style.backgroundColor = "white"
+    // }
+})
+
+
+decrement.addEventListener("click", () => {
+    if(startValue>0){
+        startValue --;
+        value.innerHTML = startValue
+
+    //     if(startValue==10){
+    //         value.style.color = "red"
+    //     }else{
+    //          value.style.color = "black"
+    //     }
+     }
+
+
+    // if(startValue==20){
+    //     div.style.backgroundColor = "red"
+    // }else{
+    //     div.style.backgroundColor = "white"
+    // }
+   
+})
+
+reset.addEventListener("click", () => {
+    startValue = 0;
+    value.innerHTML = startValue
+
+    if(startValue==20){
+        div.style.backgroundColor = "white"
+    }
+})
+
+
+
+
+//Digital Clock
+
+let day = document.querySelector("#day")
+let month = document.querySelector("#month")
+let year = document.querySelector("#year")
+let hours = document.querySelector("#hour")
+let minutes = document.querySelector("#minutes")
+let seconds = document.querySelector("#second")
+let amPm = document.querySelector("#amPm")
+
+
+
+const clock = () => {
+    const dateTime = new Date()
+
+    const monthNames = [1,2,3,4,5,6,7,8,9,10,11,12]
+
+    day.textContent = dateTime.getDate()
+    month.textContent = monthNames[dateTime.getMonth()]
+    year.textContent = dateTime .getFullYear()
+
+    hours.textContent = dateTime.getHours()
+    minutes.textContent = dateTime.getMinutes()
+    seconds.textContent =dateTime.getSeconds()
+
+    if(dateTime.getHours() <10){
+        hours.textContent = `0 ${dateTime.getHours()}`
+    }
+    else{
+        hours.textContent = dateTime.getHours() + " "
+    }
+
+    if(dateTime.getMinutes() <10){
+        minutes.textContent = `0 ${dateTime.getMinutes()}`
+    }
+    else{
+        minutes.textContent = dateTime.getMinutes() + " "
+    }
+
+
+    if(dateTime.getSeconds() <10){
+        seconds.textContent = `0 ${dateTime.getSeconds()} :`
+    }
+    else{
+        seconds.textContent = dateTime.getSeconds() + " "
+    }
+
+   dateTime.getHours() > 12 ? amPm.innerHTML = "PM" : amPm.innerHTML = "AM"
+    
+
+    
+
+}
+
+setInterval(clock)
 
 
     
