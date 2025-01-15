@@ -1021,7 +1021,7 @@ function createSelectAllButton() {
     const allImages = gallery.querySelectorAll(".image-container");
 
     if (allImages.length === 0) {
-      alert("Sorry Wax Sawir ah aan Select All dhano Kuma Jiro Gallery.");
+      alert("Sorry, there are no photos in the gallery to select all.");
       return;
     }
 
@@ -1043,7 +1043,7 @@ function startSlideshow() {
   const galleryImages = Array.from(gallery.querySelectorAll(".image-container img"));
 
   if (galleryImages.length === 0) {
-    alert("Marka Ugu Horeeso Waa inaa Doorata Fileka si aad Sawir ugu soo darsato Gallery.");
+    alert("First, you need to select a file to add a photo to the gallery.");
     return;
   }
 
@@ -1069,7 +1069,7 @@ function stopSlideshow() {
   const galleryImages = Array.from(gallery.querySelectorAll(".image-container img"));
 
   if (galleryImages.length === 0) {
-    alert("Sorry Wax Sawir ah aan STOP Gareeno Maku Jiro  Gallery.");
+    alert("Sorry, there is no photo to stop in the gallery.");
     return;
   }
 
@@ -1112,6 +1112,37 @@ function restoreAllImages() {
 }
 
 
+// Delete all images from the recycle bin
+const deleteAllRecycleBinBtn = createButton("Delete All from Recycle Bin", "delete-all-recycle-btn", deleteAllFromRecycleBin);
+
+// Add this button to the recycleBin section
+recycleBin.appendChild(deleteAllRecycleBinBtn);
+
+// Function to delete all images from the recycle bin
+function deleteAllFromRecycleBin() {
+  const allRecycleImages = recycleBin.querySelectorAll(".image-container");
+
+  if (allRecycleImages.length === 0) {
+    alert("Sorry, there are no images in the recycle bin to delete.");
+    return;
+  }
+
+  allRecycleImages.forEach((recycleContainer) => {
+    recycleBin.removeChild(recycleContainer);
+  });
+
+  alert("All images have been permanently deleted from the recycle bin.");
+}
+
+
+
+
+
+
+
+
+
+
 //  /*chapter7*/
 function handleClick() {
     alert("You clicked the 'Click Me!' button!");
@@ -1152,6 +1183,11 @@ function handleKeyUp() {
 function showItemType(itemName) {
     alert("You selected " + itemName);
 }
+
+
+
+
+
 
 
 
