@@ -1,10 +1,11 @@
+//chapter one
 
 function firstJsprogram(){
     console.log("Hello World");
     document.getElementById("hello").innerHTML ="Hello World";
 }
 
-//chapter Two
+// //chapter Two
 function number(){
     let age = 30;    
     let price = 19.99;
@@ -84,21 +85,22 @@ function OtherOperators(){
 
 
 function IncrementOperator(){
-                let x = 5; 
-                let y = x++; // y will be 5, and x will be 6 <br>
-                let z = 10; 
-                let i = ++x; // y will be 11, and x will be 11
-                document.getElementById("Increment1").innerHTML = `x ${x} <br> y ${y} <br> z ${z} <br> i ${i}`
+
+    let x = 5; 
+    let y = x++; // y will be 5, and x will be 6 <br>
+    let z = 10; 
+    let i = ++x; // y will be 11, and x will be 11
+    document.getElementById("Increment1").innerHTML = `x ${x} <br> y ${y} <br> z ${z} <br> i ${i}`
 
 }
 
 
 function DecrementOperator (){
-                    let x = 8;
-                    let z = x--; // y will be 8, and x will be 7 <br>
-                    let i = 15; 
-                    let  y = --x; // y will be 14, and x will be 14 
-                    document.getElementById("Decrement1").innerHTML = `x ${x} <br> z ${z} <br> i ${i} <br> y ${y}`
+    let x = 8;
+    let z = x--; // y will be 8, and x will be 7 <br>
+    let i = 15; 
+    let  y = --x; // y will be 14, and x will be 14 
+    document.getElementById("Decrement1").innerHTML = `x ${x} <br> z ${z} <br> i ${i} <br> y ${y}`
 }
 
 
@@ -125,7 +127,7 @@ function ComparisonOperatorsimplicitconversion(){
 }
 
 
-/*chapter Three*/
+// /*chapter Three*/
 function example1(){
     const age = 30; 
     const message = `My age is ${age} years. <br>
@@ -265,7 +267,7 @@ function Continue(){
 }
 
 
-/*chapter4*/
+// /*chapter4*/
 
 
 
@@ -278,10 +280,9 @@ document.getElementById("Ex").innerHTML =`Hello World`;
 
 function greet(Name){
 console.log(`Hello, ${Name}!`);
-document.getElementById("Ab").innerHTML = `Hello, ${Name}!`;
+document.getElementById("Ab").innerHTML = `Hello ${Name}!`;
 
 }
-greet("Abdikani");
 
 
 function add(a,b) {
@@ -297,7 +298,7 @@ function sayhello(){
 
 
 
-//chapter5
+// //chapter5
 
  //Array Literal
  function ArrayLiteral(){
@@ -549,8 +550,42 @@ function sayhello(){
     document.getElementById("person4Result").innerText = "Person4: " + personDetails + "\nHobbies: " + hobbies;
  }
 
+//  chapter6
+// Example 1: Update Text Content and Style
+function updateText() {
+    const textElement = document.getElementById('text');
+    textElement.textContent = 'The text has been updated!';
+    textElement.style.color = '#e91e63';
+    textElement.style.fontWeight = 'bold';
+    textElement.style.transition = 'color 0.3s ease';
+  }
 
+  // Example 2: Animate a Box with Random Color Change
+  function animateBoxWithColor() {
+    const box = document.getElementById('box');
+    const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    box.style.width = '150px';
+    box.style.height = '150px';
+    box.style.backgroundColor = randomColor;
+    box.style.borderRadius = '50%';
+  }
 
+  // Example 3: Highlight Text
+  function highlightText() {
+    const highlightElement = document.getElementById('highlightText');
+    highlightElement.classList.add('highlight');
+  }
+
+  // Example 4: Add New Element
+  function addNewElement() {
+    const container = document.getElementById('newElementContainer');
+    const newElement = document.createElement('p');
+    newElement.textContent = 'This is a new element added to the DOM!';
+    newElement.style.color = '#0077cc';
+    newElement.style.fontSize = '18px';
+    newElement.style.marginTop = '15px';
+    container.appendChild(newElement);
+  }
 
 // CALCULATOR PROGRAM
 function appendToDisplay(value) {
@@ -639,7 +674,7 @@ function mult()
 
 }
   
-    /*BREAK*/
+//     /*BREAK*/
 
 function brea(){
     while(true) {
@@ -672,7 +707,7 @@ function continue1(){
 }
 
 
-    /*GRADE*/
+//     /*GRADE*/
 
     function grade(){
         let sub1 = Number(prompt("ENTER SUHJECT1; "))
@@ -722,7 +757,7 @@ function continue1(){
     
     }
 
-    /* DO WHILE*/
+//     /* DO WHILE*/
 
 
 function tiirarka() {
@@ -772,125 +807,353 @@ function tempreture(){
 }
 
 
-//MY CHALLANGE
-
-//tasbiix
-
-let value = document.querySelector("#value")
-let increment = document.querySelector("#incr")
-let reset = document.querySelector("#reset")
-let decrement = document.querySelector("#decr")
-let div = document.querySelector("#div")
-
-
-let startValue = 0;
-
-increment.addEventListener("click", () => {
-    startValue ++;
-    value.innerHTML = startValue
-
-    // if(startValue==10){
-    //     value.style.color = "red"
-    // }else{
-    //      value.style.color = "black"
-    // }
-
-    // if(startValue==20){
-    //     div.style.backgroundColor = "red"
-    // }else{
-    //     div.style.backgroundColor = "white"
-    // }
-})
-
-
-decrement.addEventListener("click", () => {
-    if(startValue>0){
-        startValue --;
-        value.innerHTML = startValue
-
-    //     if(startValue==10){
-    //         value.style.color = "red"
-    //     }else{
-    //          value.style.color = "black"
-    //     }
-     }
-
-
-    // if(startValue==20){
-    //     div.style.backgroundColor = "red"
-    // }else{
-    //     div.style.backgroundColor = "white"
-    // }
-   
-})
-
-reset.addEventListener("click", () => {
-    startValue = 0;
-    value.innerHTML = startValue
-
-    if(startValue==20){
-        div.style.backgroundColor = "white"
-    }
-})
 
 
 
 
-//Digital Clock
+//project
+//DOM Elements
+const imageInput = document.getElementById("imageInput");
+const gallery = document.getElementById("gallery");
+const recycleBin = document.getElementById("recycleBin");
+const album = document.getElementById("album");
+const favourites = document.getElementById("favourites");
 
-let day = document.querySelector("#day")
-let month = document.querySelector("#month")
-let year = document.querySelector("#year")
-let hours = document.querySelector("#hour")
-let minutes = document.querySelector("#minutes")
-let seconds = document.querySelector("#second")
-let amPm = document.querySelector("#amPm")
+// Initialization
+initializeImageUpload();
+initializeSlideshowControls();
 
+// Function Definitions
 
-
-const clock = () => {
-    const dateTime = new Date()
-
-    const monthNames = [1,2,3,4,5,6,7,8,9,10,11,12]
-
-    day.textContent = dateTime.getDate()
-    month.textContent = monthNames[dateTime.getMonth()]
-    year.textContent = dateTime .getFullYear()
-
-    hours.textContent = dateTime.getHours()
-    minutes.textContent = dateTime.getMinutes()
-    seconds.textContent =dateTime.getSeconds()
-
-    if(dateTime.getHours() <10){
-        hours.textContent = `0 ${dateTime.getHours()}`
-    }
-    else{
-        hours.textContent = dateTime.getHours() + " "
-    }
-
-    if(dateTime.getMinutes() <10){
-        minutes.textContent = `0 ${dateTime.getMinutes()}`
-    }
-    else{
-        minutes.textContent = dateTime.getMinutes() + " "
-    }
-
-
-    if(dateTime.getSeconds() <10){
-        seconds.textContent = `0 ${dateTime.getSeconds()} :`
-    }
-    else{
-        seconds.textContent = dateTime.getSeconds() + " "
-    }
-
-   dateTime.getHours() > 12 ? amPm.innerHTML = "PM" : amPm.innerHTML = "AM"
-    
-
-    
-
+// Initialize image upload functionality
+function initializeImageUpload() {
+  imageInput.addEventListener("change", handleImageUpload);
 }
 
-setInterval(clock)
+function handleImageUpload(event) {
+  const files = Array.from(event.target.files);
+  files.forEach((file) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.src = e.target.result;
+
+      // Add image to gallery
+      const imageContainer = createImageContainer(img);
+      gallery.appendChild(imageContainer);
+
+      // Add image to album
+      addToAlbum(img.src);
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+// Create an image container with buttons and checkbox
+function createImageContainer(imgElement) {
+  const imageContainer = document.createElement("div");
+  imageContainer.classList.add("image-container");
+  imageContainer.style.position = "relative";
+
+  const checkbox = createCheckbox();
+  const deleteBtn = createDeleteButton(imageContainer, imgElement);
+  const favouriteBtn = createFavouriteButton(imageContainer, imgElement);
+
+  imageContainer.append(checkbox, imgElement, deleteBtn, favouriteBtn);
+  return imageContainer;
+}
+
+function createCheckbox() {
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.classList.add("select-checkbox");
+  checkbox.style.position = "absolute";
+  checkbox.style.top = "10px";
+  checkbox.style.left = "10px";
+  checkbox.style.zIndex = "10";
+  checkbox.style.width = "20px";
+  checkbox.style.height = "20px";
+  return checkbox;
+}
+
+function createDeleteButton(imageContainer, imgElement) {
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "×";
+  deleteBtn.classList.add("delete");
+  deleteBtn.addEventListener("click", () => deleteImage(imageContainer, imgElement));
+  return deleteBtn;
+}
+
+function createFavouriteButton(imageContainer, imgElement) {
+  const favouriteBtn = document.createElement("button");
+  favouriteBtn.textContent = "Love";
+  favouriteBtn.classList.add("favourite");
+  favouriteBtn.addEventListener("click", () => {
+    addToFavourites(imgElement.src);
+    gallery.removeChild(imageContainer);
+  });
+  return favouriteBtn;
+}
+
+// Add image to album
+function addToAlbum(imageSrc) {
+  const albumContainer = createImageContainer(new Image());
+  albumContainer.querySelector("img").src = imageSrc;
+  albumContainer.dataset.src = imageSrc;
+  album.appendChild(albumContainer);
+}
+
+// Add image to favourites
+function addToFavourites(imageSrc) {
+  const favouriteContainer = document.createElement("div");
+  favouriteContainer.classList.add("image-container");
+  favouriteContainer.dataset.src = imageSrc;
+
+  const favouriteImage = new Image();
+  favouriteImage.src = imageSrc;
+
+  const restoreBtn = document.createElement("button");
+  restoreBtn.textContent = "Restore";
+  restoreBtn.classList.add("restore");
+  restoreBtn.addEventListener("click", () => {
+    addToGallery(favouriteImage.src);
+    favourites.removeChild(favouriteContainer);
+  });
+
+  favouriteContainer.append(favouriteImage, restoreBtn);
+  favourites.appendChild(favouriteContainer);
+}
+
+// Add image back to gallery
+function addToGallery(imageSrc) {
+  const img = new Image();
+  img.src = imageSrc;
+  const imageContainer = createImageContainer(img);
+  gallery.appendChild(imageContainer);
+}
+
+// Delete image
+function deleteImage(imageContainer, imgElement) {
+  const imageSrc = imgElement.src;
+  gallery.removeChild(imageContainer);
+
+  removeFromContainer(album, imageSrc);
+  removeFromContainer(favourites, imageSrc);
+  addToRecycleBin(imageSrc);
+}
+
+function removeFromContainer(container, imageSrc) {
+  const items = container.querySelectorAll(`[data-src="${imageSrc}"]`);
+  items.forEach((item) => container.removeChild(item));
+}
+
+function addToRecycleBin(imageSrc) {
+  const recycleContainer = document.createElement("div");
+  recycleContainer.classList.add("image-container");
+
+  const recycleImage = new Image();
+  recycleImage.src = imageSrc;
+
+  const restoreBtn = createRestoreButton(recycleContainer, recycleImage);
+  const permanentDeleteBtn = createPermanentDeleteButton(recycleContainer);
+
+  recycleContainer.append(recycleImage, restoreBtn, permanentDeleteBtn);
+  recycleBin.appendChild(recycleContainer);
+}
+
+function createRestoreButton(recycleContainer, imgElement) {
+  const restoreBtn = document.createElement("button");
+  restoreBtn.textContent = "Restore";
+  restoreBtn.classList.add("restore");
+  restoreBtn.addEventListener("click", () => restoreImage(recycleContainer, imgElement));
+  return restoreBtn;
+}
+
+function createPermanentDeleteButton(recycleContainer) {
+  const permanentDeleteBtn = document.createElement("button");
+  permanentDeleteBtn.textContent = "Delete Permanently";
+  permanentDeleteBtn.classList.add("delete-permanent");
+  permanentDeleteBtn.addEventListener("click", () => {
+    recycleBin.removeChild(recycleContainer);
+  });
+  return permanentDeleteBtn;
+}
+
+// Restore image
+function restoreImage(recycleContainer, imgElement) {
+  const newImageContainer = createImageContainer(imgElement);
+  gallery.appendChild(newImageContainer);
+  recycleBin.removeChild(recycleContainer);
+  addToAlbum(imgElement.src);
+}
+
+// Slideshow Controls
+function initializeSlideshowControls() {
+  const slideshowControls = createSlideshowControls();
+  document.querySelector(".container").appendChild(slideshowControls);
+}
+
+function createSlideshowControls() {
+  const slideshowControls = document.createElement("div");
+  slideshowControls.classList.add("slideshow-controls");
+
+  const startSlideshowBtn = createButton("Start Slideshow", "slideshow-btn", startSlideshow);
+  const stopSlideshowBtn = createButton("Stop Slideshow", "slideshow-btn", stopSlideshow);
+  const selectAllBtn = createSelectAllButton();
+  const deleteSelectedBtn = createButton("Delete Selected", "delete-selected-btn", deleteSelectedImages);
+  const restoreAllBtn = createButton("Restore All", "restore-all-btn", restoreAllImages);
+
+  slideshowControls.append(startSlideshowBtn, stopSlideshowBtn, selectAllBtn, deleteSelectedBtn, restoreAllBtn);
+  return slideshowControls;
+}
+
+function createButton(text, className, onClick) {
+  const button = document.createElement("button");
+  button.textContent = text;
+  button.classList.add(className);
+  button.addEventListener("click", onClick);
+  return button;
+}
+
+function createSelectAllButton() {
+  let isAllSelected = false;
+  const selectAllBtn = createButton("Select All", "select-all-btn", () => {
+    const allImages = gallery.querySelectorAll(".image-container");
+
+    if (allImages.length === 0) {
+      alert("Sorry Wax Sawir ah aan Select All dhano Kuma Jiro Gallery.");
+      return;
+    }
+
+    isAllSelected = !isAllSelected;
+    allImages.forEach((imageContainer) => {
+      const checkbox = imageContainer.querySelector(".select-checkbox");
+      checkbox.checked = isAllSelected;
+      imageContainer.classList.toggle("selected", isAllSelected);
+    });
+
+    selectAllBtn.textContent = isAllSelected ? "Deselect All" : "Select All";
+  });
+  return selectAllBtn;
+}
+
+// Slideshow functionality
+let slideshowInterval;
+function startSlideshow() {
+  const galleryImages = Array.from(gallery.querySelectorAll(".image-container img"));
+
+  if (galleryImages.length === 0) {
+    alert("Marka Ugu Horeeso Waa inaa Doorata Fileka si aad Sawir ugu soo darsato Gallery.");
+    return;
+  }
+
+  let currentIndex = 0;
+  function highlightImage(index) {
+    galleryImages.forEach((img, i) => {
+      img.style.border = i === index ? "4px solid #6c63ff" : "none";
+      img.style.transform = i === index ? "scale(1.1)" : "scale(1)";
+    });
+  }
+
+  function showNextImage() {
+    highlightImage(currentIndex);
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+  }
+
+  slideshowInterval = setInterval(showNextImage, 2000);
+  showNextImage();
+}
+
+function stopSlideshow() {
+  clearInterval(slideshowInterval);
+  const galleryImages = Array.from(gallery.querySelectorAll(".image-container img"));
+
+  if (galleryImages.length === 0) {
+    alert("Sorry Wax Sawir ah aan STOP Gareeno Maku Jiro  Gallery.");
+    return;
+  }
+
+  galleryImages.forEach((img) => {
+    img.style.border = "none";
+    img.style.transform = "scale(1)";
+  });
+}
+
+// Delete selected images
+function deleteSelectedImages() {
+  const selectedImages = gallery.querySelectorAll(".image-container.selected");
+
+  if (selectedImages.length === 0) {
+    alert("Choose an image to delete.");
+    return;
+  }
+
+  selectedImages.forEach((imageContainer) => {
+    const imgElement = imageContainer.querySelector("img");
+    deleteImage(imageContainer, imgElement);
+  });
+}
+
+// Restore all images from the recycle bin
+function restoreAllImages() {
+  const allRecycleImages = recycleBin.querySelectorAll(".image-container");
+
+  if (allRecycleImages.length === 0) {
+    alert("No images in the recycle bin to restore.");
+    return;
+  }
+
+  allRecycleImages.forEach((recycleContainer) => {
+    const imgElement = recycleContainer.querySelector("img");
+    restoreImage(recycleContainer, imgElement);
+  });
+
+  alert("All images have been restored successfully.");
+}
+
+
+//  /*chapter7*/
+function handleClick() {
+    alert("You clicked the 'Click Me!' button!");
+}
+
+function handleHover() {
+    document.getElementById("hover-event").style.backgroundColor = "yellow";
+}
+
+function handleMouseOut() {
+    document.getElementById("hover-event").style.backgroundColor = "white";
+}
+
+// Handle keydown event
+function handleKeyDown() {
+    var inputText = document.getElementById("key-input").value;
+    if(inputText) {
+        document.getElementById("event-message").textContent = "You typed (keydown): " + inputText;
+    }
+}
+
+// Handle keypress event
+function handleKeyPress() {
+    var inputText = document.getElementById("key-input").value;
+    if(inputText) {
+        document.getElementById("event-message").textContent = "You typed (keypress): " + inputText;
+    }
+}
+
+// Handle keyup event
+function handleKeyUp() {
+    var inputText = document.getElementById("key-input").value;
+    if(inputText) {
+        document.getElementById("event-message").textContent = "You typed (keyup): " + inputText;
+    }
+}
+
+function showItemType(itemName) {
+    alert("You selected " + itemName);
+}
+
+
 
 
     

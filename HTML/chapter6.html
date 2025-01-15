@@ -8,7 +8,6 @@
     <script src="../javascript/main.js"></script>
 </head>
 <body>
-    
     <header>
         <div class="ani">
             <ul>
@@ -22,13 +21,14 @@
                         <li><a href="chapter3.html">Chapter3</a></li>
                         <li><a href="chapter4.html">Chapter4</a></li>
                         <li><a href="chapter5.html">Chapter5</a></li>
-                        <li><a href="chapter5.html">Chapter6</a></li>
-                        <li><a href="chapter5.html">Chapter7</a></li>
-                        <li><a href="chapter5.html">Chapter8</a></li>
+                        <li><a href="chapter6.html">Chapter6</a></li>
+                        <li><a href="chapter7.html">Chapter7</a></li>
+                        <li><a href="chapter8.html">Chapter8</a></li>
                     </ul>
                 </div>
 
                 </li>
+                <li><a href="Project.html" target="_self">Project</a></li>
                 <li><a href="About.html">About us</a></li>
                 <li><a href="#">Assignments</a>
                 
@@ -39,51 +39,36 @@
                             
                            
                         </ul>
-
                     </div>
                 </li>
-                <li><a href="#">My Challanges</a>
-                    <div  class="submenu">
-                        <ul>
-                            <li><a href="Tasbiix.html" target="_self">Tasbiix</a></li>
-                            <li><a href="Digital Clock.html" target="_self">Digital Clock</a></li>
-                        </ul>
-                    </div>
             </ul>
         </div>
         </header>
 
-        <div class="pb">
-        <div class="container">
-            <h1 style="font-size: 3em;">Digital Clock</h1>
-            <div class="date">
-                <h1 id="day">20</h1>
-                <h1 id="month">April</h1>
-                <h1 id="year">2030</h1>
-            </div>
-            <div class="divider"></div>
-            <div class="time">
-                <h1 id="hour">10</h1>
-                <h1>:</h1>
-                <h1 id="minutes">00</h1>
-                <h1>:</h1>
-              
-                <h1 id="second">00</h1>
-                <h1>:</h1>
-                <h1 id="amPm">PM</h1>
-            </div>
-        </div>
-
-    </div>
-
-
+        <div class="contner">
+            <h1> DOM Examples</h1>
+        
+            <!-- Example 1: Change Text Content and Style -->
+            <p id="text">Click the button to change this text!</p>
+            <button onclick="updateText()" class="button2">Change Text</button>
+        
+            <!-- Example 2: Animate a Box with Color Change -->
+            <div id="box" class="box"></div>
+            <button onclick="animateBoxWithColor()" class="button2">Animate Box</button>
+        
+            <!-- Example 3: Highlight Text -->
+            <p id="highlightText">Highlight this text with a click!</p>
+            <button onclick="highlightText()" class="button2">Highlight</button>
+        
+            <!-- Example 4: Add New Element -->
+            <div id="newElementContainer"></div>
+            <button onclick="addNewElement()" class="button2">Add New Element</button>
+          </div>
 
         <footer>
             <div>
             <p id="All">&copy; copyright All  Abdikani</p>
         </div>
         </footer>
-
-        
 </body>
 </html>

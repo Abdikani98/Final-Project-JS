@@ -6,10 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../javascript/main.js"></script>
-    
 </head>
 <body>
-    
     <header>
         <div class="ani">
             <ul>
@@ -23,13 +21,14 @@
                         <li><a href="chapter3.html">Chapter3</a></li>
                         <li><a href="chapter4.html">Chapter4</a></li>
                         <li><a href="chapter5.html">Chapter5</a></li>
-                        <li><a href="chapter5.html">Chapter6</a></li>
-                        <li><a href="chapter5.html">Chapter7</a></li>
-                        <li><a href="chapter5.html">Chapter8</a></li>
+                        <li><a href="chapter6.html">Chapter6</a></li>
+                        <li><a href="chapter7.html">Chapter7</a></li>
+                        <li><a href="chapter8.html">Chapter8</a></li>
                     </ul>
                 </div>
 
                 </li>
+                <li><a href="Project.html" target="_self">Project</a></li>
                 <li><a href="About.html">About us</a></li>
                 <li><a href="#">Assignments</a>
                 
@@ -42,37 +41,48 @@
                         </ul>
 
                     </div>
+                
                 </li>
-                <li><a href="#">My Challanges</a>
-                    <div  class="submenu">
-                        <ul>
-                            <li><a href="Tasbiix.html" target="_self">Tasbiix</a></li>
-                            <li><a href="Digital Clock.html" target="_self">Digital Clock</a></li>
-                        </ul>
-                    </div>
+
+                
             </ul>
+
+            
         </div>
+        
         </header>
 
-        <div class="pt">
-        <div id="div">
-            <h1>Tasbiix</h1>
-            <h1 id="value">0</h1>
-        
-            <div>
-                <button id="incr">Increment</button>
-                <button id="reset">Reset</button>
-                <button id="decr">Decrement</button>
-            </div>
+        <div class="pp">
+            <main>
+                <div class="container23">
+                    <h1>Event  Example</h1>
+                    <div class="event-card" id="click-event" onclick="handleClick()">Click Me!</div>
+                    <div class="event-card1" id="hover-event" onmouseover="handleHover()" onmouseout="handleMouseOut()">Hover Over Me!</div>
+                    <input type="text" id="key-input" placeholder="Type Something" onkeydown="handleKeyDown()" onkeypress="handleKeyPress()" onkeyup="handleKeyUp()" />
+            
+                    
+            
+                    <div class="item-container">
+                        <div class="item" onclick="showItemType('Item 1')">Item 1</div>
+                        <div class="item" onclick="showItemType('Item 2')">Item 2</div>
+                        <div class="item" onclick="showItemType('Item 3')">Item 3</div>
+                    </div>
+            
+                    <p id="event-message"></p>
+                    <p id="item-message"></p>
+                </div>    </main>
         </div>
-    </div>
+    
+        
+
+        
 
         <footer>
             <div>
             <p id="All">&copy; copyright All  Abdikani</p>
         </div>
         </footer>
+    
 
-       
 </body>
 </html>

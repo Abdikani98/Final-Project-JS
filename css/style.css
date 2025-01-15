@@ -121,7 +121,7 @@ ul li:hover .submenu {
 .imge h4 span,
 .imge h5 span {
     font-weight: bold;
-    color: #FFEB3B;
+    color: #030300;
 }
 
 .imge h1 {
@@ -150,6 +150,7 @@ ul li:hover .submenu {
 
 .button1 {
     background-color: rgb(226, 218, 242);
+    color: black;
     padding: 15px 0px;
     width: 600px;
     height: 100px;
@@ -209,21 +210,30 @@ ul li:hover .submenu {
 
 .calculator {
     width: 460px;
-    height: 450px;
+    height: 530px;
     background-color: brown;
     border-radius: 10px;
     box-shadow: 20px 20px 40px black;
     padding: 20px;
-    animation-name: anim1;
+    animation-name: fadeIn;
     animation-duration: 2s;
     animation-delay: 0.1s;
     
-   
-    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .display {
-    width: 100%;
+    width: 700px;
     height: 40px;
     font-size: 30px;
     text-align: right;
@@ -244,8 +254,9 @@ ul li:hover .submenu {
 .button {
     background-color: #f0f0f0;
     border: 1px solid #ddd;
-    padding: 20px;
-    font-size: 18px;
+    color: black;
+    padding: 15px;
+    font-size: 1.6em;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s ease;
@@ -299,182 +310,278 @@ h1 {
 }
 
 
+/* chapter7 */
 
-
-
-/*Tasbiix*/
-
-
-.pt{
-    padding-top: 15%;
-    padding-left: 35%;
-}
-#div {
+.container23 {
     text-align: center;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    padding: 30px 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 400px;
-    animation: fadeIn 1.5s ease-in-out;
+    max-width: 500px;
+    margin: auto;
 }
-#div h1:first-of-type {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    color: white;
-}
-#value {
-    font-size: 3.5rem;
-    font-weight: bold;
+
+.container23 h1 {
+    color: #fffafa;
     margin-bottom: 20px;
-    color: #00ff6a;
-    /* text-shadow: 0 3px 10px rgba(6, 7, 6, 0.7); */
-    animation: pulse 1.5s infinite;
+    font-size: 2.4em;
 }
-button {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
+
+.event-card, .event-card1 {
+    background-color: #fcfcfe;
+    color: rgb(11, 6, 6);
+    padding: 20px;
+    margin: 15px 0;
     border-radius: 10px;
+    font-size: 20px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
 }
-button:active {
-    transform: scale(0.95);
+
+.event-card:hover {
+    background-color: #d0d3f9;
 }
-#incr {
-    background: #4caf50;
-    color: #fff;
+
+.event-card:focus {
+    outline: 2px solid #333;
 }
-#incr:hover {
-    background: #45a049;
+
+input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
 }
-#reset {
-    background: #f44336;
-    color: #fff;
-}
-#reset:hover {
-    background: #e53935;
-}
-#decr {
-    background: #2196f3;
-    color: #fff;
-}
-#decr:hover {
-    background: #1e88e5;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
+
+input[type="text"]:focus {
+    border-color: #6a7fdf;
 }
 
 
-/*Digital Clock*/
+.item-container {
+    margin-top: 30px;
+}
 
-.pb{
-    padding-top: 10%;
-    padding-left: 35%;
-}
-.container {
-    background: linear-gradient(135deg, #6a11cb, #154292);
-    width: 440px;
-    color: #fff;
-    border-radius: 15px;
-    padding: 10px 60px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
-}
-.date, .time {
-    margin-bottom: 20px;
-}
-.date h1, .time h1 {
-    font-size: 3rem;
+.item {
+    background-color: #ffffff;
+    color: rgba(1, 0, 0, 0.888);
+    padding: 20px;
     margin: 10px 0;
-    animation: bounce 1.5s infinite;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-.date h1:nth-child(2) {
-    font-size: 4rem;
-    font-weight: bold;
-    animation-delay: 0.3s;
+
+.item:hover {
+    background-color: #fce3e3;
 }
-.divider {
-    width: 80%;
-    margin: 20px auto;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    animation: scaleIn 1s ease-in-out;
+
+p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #333;
 }
-.time h1 {
+
+
+
+
+
+/* project */
+.container {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    text-align: center;
+
+}
+.from-top{
+    padding: 15%;
+}
+
+  /* Styling for the buttons */
+  .select-all-buttons {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background: #6c63ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  .container h1{
+    color: rgb(0, 64, 123);
+    font-size: 2em;
+  }
+
+  
+  
+  /* Styling for the gallery and favourites sections */
+  .action-sections {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .gallery, .favourites {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    background: #fff;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery:hover, .favourites:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for individual image containers */
+  .image-container {
+    position: relative;
     display: inline-block;
-    margin: 0 5px;
-}
-.time #amPm {
-    font-size: 2rem;
-    vertical-align: top;
-}
+    border: 2px solid #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .image-container input[type="checkbox"] {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .image-container button {
+    background: #f2310f;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+  }
+  
+  button.like {
+    background: #e84118;
+  }
+  
+  button.delete {
+    background: #44bd32;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  
+  
+  /* slideshow */
+  .slideshow-controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .slideshow-controls button {
+    background: #6c63ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .slideshow-controls button:hover {
+    opacity: 0.9;
+  }
+  
+  .gallery img {
+    transition: all 0.3s ease;
+  }
+  
+  /* check box */
+  #check{
+    display: none;
+  }
+  
+  
+  /* sllect */
+  .selected {
+    border: 2px solid #6c63ff; /* Apply the border with the desired color */
+    transform: scale(1.1);      /* Slight zoom effect for better visual feedback */
+    transition: transform 0.3s ease, border 0.3s ease; /* Smooth transition for transform and border */
+  }
 
-/* Keyframe animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-@keyframes scaleIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
+  /* chapter6 */
 
-/* Clock ticking animation */
-.time h1:nth-child(2),
-.time h1:nth-child(4),
-.time h1:nth-child(6) {
-    animation: pulse 1s infinite;
-}
+  .contner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .contner{
+    color: white;
+  }
+.button2 {
+    background: linear-gradient(to right, #fefefe, #f7f8fb);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 5px;
+    transition: all 0.3s ease;
+  }
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #ff6a00;
+    margin: 20px;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+  }
+  .highlight {
+    padding: 10px;
+    background-color: #ffeb3b;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  p {
+    font-size: 18px;
+  }
 
 
 
