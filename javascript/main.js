@@ -5,7 +5,7 @@ function firstJsprogram(){
     document.getElementById("hello").innerHTML ="Hello World";
 }
 
-// //chapter Two
+//chapter Two
 function number(){
     let age = 30;    
     let price = 19.99;
@@ -298,7 +298,7 @@ function sayhello(){
 
 
 
-// //chapter5
+//chapter5
 
  //Array Literal
  function ArrayLiteral(){
@@ -550,42 +550,7 @@ function sayhello(){
     document.getElementById("person4Result").innerText = "Person4: " + personDetails + "\nHobbies: " + hobbies;
  }
 
-//  chapter6
-// // Example 1: Update Text Content and Style
-// function updateText() {
-//     const textElement = document.getElementById('text');
-//     textElement.textContent = 'The text has been updated!';
-//     textElement.style.color = '#e91e63';
-//     textElement.style.fontWeight = 'bold';
-//     textElement.style.transition = 'color 0.3s ease';
-//   }
 
-//   // Example 2: Animate a Box with Random Color Change
-//   function animateBoxWithColor() {
-//     const box = document.getElementById('box');
-//     const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-//     box.style.width = '150px';
-//     box.style.height = '150px';
-//     box.style.backgroundColor = randomColor;
-//     box.style.borderRadius = '50%';
-//   }
-
-//   // Example 3: Highlight Text
-//   function highlightText() {
-//     const highlightElement = document.getElementById('highlightText');
-//     highlightElement.classList.add('highlight');
-//   }
-
-//   // Example 4: Add New Element
-//   function addNewElement() {
-//     const container = document.getElementById('newElementContainer');
-//     const newElement = document.createElement('p');
-//     newElement.textContent = 'This is a new element added to the DOM!';
-//     newElement.style.color = '#0077cc';
-//     newElement.style.fontSize = '18px';
-//     newElement.style.marginTop = '15px';
-//     container.appendChild(newElement);
-//   }
 
 
         // Example 1: Update Text Content and Style
