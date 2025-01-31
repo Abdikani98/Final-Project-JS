@@ -462,7 +462,7 @@ function sayhello(){
     document.getElementById("filterEvensResult").innerText = "Evens: " + evens.join(", ");
  }
  
- // REDUCE: Isugeynta dhammaan waxyaabaha ku jira liiska
+ // Sum: Isugeynta dhammaan waxyaabaha ku jira liiska
  function calculateSum() {
     const numbers2 = [1, 2, 3, 4, 5];
     function add(total, num) {
@@ -472,7 +472,7 @@ function sayhello(){
     document.getElementById("sumResult").innerText = "Sum: " + sum;
  }
  
- // SOME: Hubinta haddii liiska uu leeyahay qiyamka ka weyn 3
+ // SOME: Checks if at least one element meets a specified condition
  function checkSomeCondition() {
     const numbers3 = [1, 2, 3, 4, 5];
     function isGreaterThanThree(num) {
@@ -482,7 +482,7 @@ function sayhello(){
     document.getElementById("someConditionResult").innerText = "Has large number: " + hasLargeNumber;
  }
  
- // EVERY: Hubinta haddii dhammaan qiyamka liiska ka yar yihiin 10
+ // EVERY: Checks if all elements meet a specified condition
  function checkEveryCondition() {
     const numbers4 = [1, 2, 3, 4, 5];
     function isLessThanTen(num) {
@@ -551,41 +551,103 @@ function sayhello(){
  }
 
 //  chapter6
-// Example 1: Update Text Content and Style
+// // Example 1: Update Text Content and Style
+// function updateText() {
+//     const textElement = document.getElementById('text');
+//     textElement.textContent = 'The text has been updated!';
+//     textElement.style.color = '#e91e63';
+//     textElement.style.fontWeight = 'bold';
+//     textElement.style.transition = 'color 0.3s ease';
+//   }
+
+//   // Example 2: Animate a Box with Random Color Change
+//   function animateBoxWithColor() {
+//     const box = document.getElementById('box');
+//     const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+//     box.style.width = '150px';
+//     box.style.height = '150px';
+//     box.style.backgroundColor = randomColor;
+//     box.style.borderRadius = '50%';
+//   }
+
+//   // Example 3: Highlight Text
+//   function highlightText() {
+//     const highlightElement = document.getElementById('highlightText');
+//     highlightElement.classList.add('highlight');
+//   }
+
+//   // Example 4: Add New Element
+//   function addNewElement() {
+//     const container = document.getElementById('newElementContainer');
+//     const newElement = document.createElement('p');
+//     newElement.textContent = 'This is a new element added to the DOM!';
+//     newElement.style.color = '#0077cc';
+//     newElement.style.fontSize = '18px';
+//     newElement.style.marginTop = '15px';
+//     container.appendChild(newElement);
+//   }
+
+
+        // Example 1: Update Text Content and Style
 function updateText() {
     const textElement = document.getElementById('text');
     textElement.textContent = 'The text has been updated!';
     textElement.style.color = '#e91e63';
     textElement.style.fontWeight = 'bold';
     textElement.style.transition = 'color 0.3s ease';
-  }
+}
 
-  // Example 2: Animate a Box with Random Color Change
-  function animateBoxWithColor() {
+// Example 2: Animate a Box with Random Color Change
+function animateBoxWithColor() {
     const box = document.getElementById('box');
     const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
     box.style.width = '150px';
     box.style.height = '150px';
     box.style.backgroundColor = randomColor;
     box.style.borderRadius = '50%';
-  }
+}
 
-  // Example 3: Highlight Text
-  function highlightText() {
+// Example 3: Highlight Text
+function highlightText() {
     const highlightElement = document.getElementById('highlightText');
     highlightElement.classList.add('highlight');
-  }
+}
 
-  // Example 4: Add New Element
-  function addNewElement() {
+// Example 4: Add New Element with Remove Button
+function addNewElement() {
     const container = document.getElementById('newElementContainer');
+    
+    // Create new paragraph
     const newElement = document.createElement('p');
     newElement.textContent = 'This is a new element added to the DOM!';
-    newElement.style.color = '#0077cc';
+    newElement.style.color = '#fff';
     newElement.style.fontSize = '18px';
     newElement.style.marginTop = '15px';
+
+    // Create remove button
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.style.marginLeft = '10px';
+    removeButton.style.padding = '5px 10px';
+    removeButton.style.backgroundColor = '#e74c3c';
+    removeButton.style.color = 'white';
+    removeButton.style.border = 'none';
+    removeButton.style.cursor = 'pointer';
+    
+    // Remove element on button click
+    removeButton.onclick = function () {
+        container.removeChild(newElement);
+    };
+
+    // Append remove button to new element
+    newElement.appendChild(removeButton);
+    
+    // Append new element to container
     container.appendChild(newElement);
-  }
+}
+
+
+
 
 // CALCULATOR PROGRAM
 function appendToDisplay(value) {
@@ -1137,12 +1199,6 @@ function deleteAllFromRecycleBin() {
 
 
 
-
-
-
-
-
-
 //  /*chapter7*/
 function handleClick() {
     alert("You clicked the 'Click Me!' button!");
@@ -1181,134 +1237,7 @@ function handleKeyUp() {
 }
 
 function showItemType(itemName) {
-    alert("You selected " + itemName);
+    alert("You selected " + itemName); 
 }
-
-
-
-
-
-
-
-
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

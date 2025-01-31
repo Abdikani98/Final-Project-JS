@@ -188,7 +188,7 @@ ul li:hover .submenu {
 }
 
 .text p {
-    margin-left: 20%;
+    margin-left: 27%;
     font-size: 1.4em;
     color: white;
 }
@@ -200,6 +200,12 @@ ul li:hover .submenu {
     animation-duration: 2s;
     animation-delay: 0.3s;
     margin-left: 20%;
+}
+#text{
+    color: #fff;
+}
+#highlightText{
+    color: #fff;
 }
 
 .cal{
