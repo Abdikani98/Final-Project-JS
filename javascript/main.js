@@ -1382,47 +1382,6 @@ function deleteAllFromRecycleBin() {
 
 
 
-//  /*chapter7*/
-// function handleClick() {
-//     alert("You clicked the 'Click Me!' button!");
-// }
-
-// function handleHover() {
-//     document.getElementById("hover-event").style.backgroundColor = "yellow";
-// }
-
-// function handleMouseOut() {
-//     document.getElementById("hover-event").style.backgroundColor = "white";
-// }
-
-// // Handle keydown event
-// function handleKeyDown() {
-//     var inputText = document.getElementById("key-input").value;
-//     if(inputText) {
-//         document.getElementById("event-message").textContent = "You typed (keydown): " + inputText;
-//     }
-// }
-
-// // Handle keypress event
-// function handleKeyPress() {
-//     var inputText = document.getElementById("key-input").value;
-//     if(inputText) {
-//         document.getElementById("event-message").textContent = "You typed (keypress): " + inputText;
-//     }
-// }
-
-// // Handle keyup event
-// function handleKeyUp() {
-//     var inputText = document.getElementById("key-input").value;
-//     if(inputText) {
-//         document.getElementById("event-message").textContent = "You typed (keyup): " + inputText;
-//     }
-// }
-
-// function showItemType(itemName) {
-//     alert("You selected " + itemName); 
-// }
-
 
 
 
