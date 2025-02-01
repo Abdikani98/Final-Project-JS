@@ -318,78 +318,121 @@ h1 {
 
 /* chapter7 */
 
-.container23 {
-    text-align: center;
-    max-width: 500px;
-    margin: auto;
-}
 
-.container23 h1 {
-    color: #fffafa;
-    margin-bottom: 20px;
-    font-size: 2.4em;
-}
-#event-message{
-    color: white;
-}
-
-.event-card, .event-card1 {
-    background-color: #fcfcfe;
-    color: rgb(11, 6, 6);
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.event-card:hover {
-    background-color: #d0d3f9;
-}
-
-.event-card:focus {
-    outline: 2px solid #333;
-}
-
-input[type="text"] {
-    padding: 10px;
-    width: 250px;
-    font-size: 1.2em;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s;
-}
-
-input[type="text"]:focus {
-    border-color: #6a7fdf;
-}
-
-
-.item-container {
-    margin-top: 30px;
-}
-
-.item {
-    background-color: #ffffff;
-    color: rgba(1, 0, 0, 0.888);
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.item:hover {
-    background-color: #fce3e3;
-}
 
 p {
     font-size: 1.2em;
     margin-top: 20px;
     color: #333;
+}
+
+/* General Styling */
+
+
+h2 {
+    color: #444;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Button Styling */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* button:hover {
+    background: #f2310f;
+} */
+
+/* Mouse Events Styling */
+#myElement {
+    display: inline-block;
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    transition: background 0.3s;
+    color: white;
+}
+
+#myElement:hover {
+    background: #d4edda;
+}
+
+/* Input Fields */
+input[type="text"] {
+    padding: 8px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    background: #e3f2fd;
+   
+}
+
+input[type="text"]:blur {
+    background: #f8d7da;
+}
+
+/* Form Styling */
+/* form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+form button {
+    margin-top: 10px;
+}
+
+/* Submitted Form Styling */
+form.submitted {
+    background: #d4edda;
+    border: 2px solid #28a745;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Event Delegation List */
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin: 5px 0;
+    /* background: #f8f9fa; */
+    border-radius: 5px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+li:hover {
+    background: #d1ecf1;
 }
 
 
@@ -584,7 +627,7 @@ p {
   }
   .highlight {
     padding: 10px;
-    background-color: #ffeb3b;
+    background-color: #427e27;
     border-radius: 5px;
     font-weight: bold;
     color: #333;

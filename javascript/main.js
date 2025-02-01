@@ -1,3 +1,177 @@
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Button Click Example
+//     const button = document.getElementById("myButton");
+//     button.addEventListener("click", function () {
+//         alert("Button clicked!");
+//     });
+
+//     // Mouse Events Example
+//     const element = document.getElementById("myElement");
+//     element.addEventListener("mouseover", function () {
+//         element.style.backgroundColor = "green";
+//     });
+//     element.addEventListener("mouseout", function () {
+//         element.style.backgroundColor = "blue";
+//     });
+
+//     // Keyboard Events Example
+//     const textInput = document.getElementById("textInput");
+//     const outputDiv = document.getElementById("output");
+
+//     textInput.addEventListener("keydown", function (event) {
+//         outputDiv.innerText = `Keydown: ${event.key}`;
+//     });
+
+//     textInput.addEventListener("keypress", function (event) {
+//         outputDiv.innerText += `\nKeypress: ${event.key}`;
+//     });
+
+//     textInput.addEventListener("keyup", function (event) {
+//         outputDiv.innerText += `\nKeyup: ${event.key}`;
+//     });
+
+//     // Focus Events Example
+//     const focusInput = document.getElementById("focusInput");
+//     const focusOutput = document.getElementById("focusOutput");
+
+//     focusInput.addEventListener("focus", function () {
+//         updateFocusOutput("Element focused!", "focused");
+//     });
+
+//     focusInput.addEventListener("blur", function () {
+//         updateFocusOutput("Element blurred!", "blurred");
+//     });
+
+//     function updateFocusOutput(message, className) {
+//         focusOutput.innerText = message;
+//         focusOutput.className = className;
+//     }
+
+//     // Form Events Example
+//     const formInput = document.getElementById("formInput");
+//     const formOutput = document.getElementById("formOutput");
+//     const form = document.getElementById("myForm");
+
+//     formInput.addEventListener("input", function () {
+//         if (formInput.value !== "") {
+//             updateFormOutput("Input changed!", "valid");
+//         } else {
+//             updateFormOutput("Input changed with empty!", "invalid");
+//         }
+//     });
+
+//     form.addEventListener("submit", function (event) {
+//         event.preventDefault(); // Prevents the default form submission
+//         updateFormOutput("Form submitted!", "valid");
+//     });
+
+//     function updateFormOutput(message, className) {
+//         formOutput.innerText = message;
+//         formOutput.className = className;
+//     }
+
+//     // Event Delegation Example
+//     const parentList = document.getElementById("parentList");
+
+//     parentList.addEventListener("click", function (event) {
+//         if (event.target.tagName === "LI") {
+//             alert("Clicked on: " + event.target.innerText);
+//         }
+//     });
+// });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Button Click Example
+    const button = document.getElementById("myButton");
+    button.addEventListener("click", function () {
+        alert("Button clicked!");
+    });
+
+    // Mouse Events Example
+    const element = document.getElementById("myElement");
+    element.addEventListener("mouseover", function () {
+        element.style.backgroundColor = "green";
+    });
+    element.addEventListener("mouseout", function () {
+        element.style.backgroundColor = "blue";
+    });
+
+    // Keyboard Events Example
+    const textInput = document.getElementById("textInput");
+    const outputDiv = document.getElementById("output");
+
+    textInput.addEventListener("keydown", function (event) {
+        outputDiv.innerText = `Keydown: ${event.key}`;
+    });
+
+    textInput.addEventListener("keypress", function (event) {
+        outputDiv.innerText += `\nKeypress: ${event.key}`;
+    });
+
+    textInput.addEventListener("keyup", function (event) {
+        outputDiv.innerText += `\nKeyup: ${event.key}`;
+    });
+
+    // Focus Events Example
+    const focusInput = document.getElementById("focusInput");
+    const focusOutput = document.getElementById("focusOutput");
+
+    focusInput.addEventListener("focus", function () {
+        updateFocusOutput("Element focused!", "focused");
+    });
+
+    focusInput.addEventListener("blur", function () {
+        updateFocusOutput("Element blurred!", "blurred");
+    });
+
+    function updateFocusOutput(message, className) {
+        focusOutput.innerText = message;
+        focusOutput.className = className;
+    }
+
+    // Form Events Example with Validation
+    const formInput = document.getElementById("formInput");
+    const formOutput = document.getElementById("formOutput");
+    const form = document.getElementById("myForm");
+
+    formInput.addEventListener("input", function () {
+        if (formInput.value !== "") {
+            updateFormOutput("Input changed!", "valid");
+        } else {
+            updateFormOutput("Input changed with empty!", "invalid");
+        }
+    });
+
+    form.addEventListener("submit", function (event) {
+        if (formInput.value.trim() === "") {
+            event.preventDefault(); // Prevents form submission
+            updateFormOutput("Please fill out the input field!", "invalid");
+        } else {
+            event.preventDefault(); // Prevents the default form submission
+            alert("Form submitted successfully!", "valid");
+        }
+    });
+
+    function updateFormOutput(message, className) {
+        formOutput.innerText = message;
+        formOutput.className = className;
+    }
+
+    // Event Delegation Example
+    const parentList = document.getElementById("parentList");
+
+    parentList.addEventListener("click", function (event) {
+        if (event.target.tagName === "LI") {
+            alert("Clicked on: " + event.target.innerText);
+        }
+    });
+});
+
+
+
+
 //chapter one
 
 function firstJsprogram(){
@@ -413,6 +587,14 @@ function sayhello(){
      document.getElementById("unshiftElement1").textContent = `After: ${fruit2}`
  
  }
+
+//  pop method
+
+// function POPElemet(){
+//     const fruit6 = ["apple","Banana","Lemon"]
+//     fruit6.pop();
+//     document.getElementById("popElement").textContent = `fruit6: ${fruit6}`
+// }
  
  
  //
@@ -452,6 +634,7 @@ function sayhello(){
  //console.log("After the update : ",fruit5);
  }
  
+//  filter
 
  function filterEvens() {
     const numbers1 = [1, 2, 3, 4, 5];
@@ -491,6 +674,41 @@ function sayhello(){
     const allSmall = numbers4.every(isLessThanTen);
     document.getElementById("everyConditionResult").innerText = "All less than ten: " + allSmall;
  }
+
+//  Reduce
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("reduceButton").addEventListener("click", function () {
+        const numbers = [1, 2, 3, 4, 5];
+        const sum = numbers.reduce((acc, num) => acc + num, 0); // Wadarta tirooyinka
+        document.getElementById("reduceResult").innerHTML = `Sum of Numbers: ${sum}`;
+    });
+});
+
+// ForEach
+
+ document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("forEachButton").addEventListener("click", function () {
+        runForEach();
+    });
+});
+ 
+ function runForEach() {
+    const numbers = [1, 2, 3, 4, 5];
+    let result = ""; // Waxaa lagu kaydin doonaa natiijada oo dhan
+    numbers.forEach((number, index) => {
+        result += `Index: ${index}, Number: ${number} <br>`;
+    });
+    document.getElementById("forEachResult").innerHTML = result; // Waa in la adeegsadaa `innerHTML`
+}
+
+    // Map()
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("mapButton").addEventListener("click", function () {
+            const numbers = [1, 2, 3, 4, 5];
+            const squaredNumbers = numbers.map(num => num * num); // Isku dhufashada 2
+            document.getElementById("mapResult").innerHTML = `Squared Numbers: ${squaredNumbers.join(", ")}`;
+        });
+    });
  
  // OBJECT: Ku darida xogta qofka
  function showPerson1() {
@@ -552,7 +770,7 @@ function sayhello(){
 
 
 
-
+// chapter 6
         // Example 1: Update Text Content and Style
 function updateText() {
     const textElement = document.getElementById('text');
@@ -632,7 +850,7 @@ function calculateResult() {
     }
 }
 
-
+// Assignments
 
 function Addition()
 {
@@ -801,24 +1019,24 @@ function tiirarka() {
         choice=Number(prompt("Choice (1-6): "));
         switch (choice) {
             case 1:
-                console.log("Shahada (Faith)");
+               alert("Shahada (Faith)");
                 break;
             case 2:
-                console.log("Salah (Prayer)");
+               alert("Salah (Prayer)");
                 break;
             case 3:
-                console.log("Zakat (Charity)");
+               alert("Zakat (Charity)");
                 break;
             case 4:
-                console.log("Sawm (Fasting)");
+               alert("Sawm (Fasting)");
                 break;
             case 5:
-                console.log("Hajj (Pilgrimage)");
+               alert("Hajj (Pilgrimage)");
                 break;
             case 6:
-                console.log("Existing the program");
+               alert("Existing the program");
             default:
-                console.log("invalid choice! please try again");
+               alert("invalid choice! please try again");
 
         }
 
@@ -1165,44 +1383,47 @@ function deleteAllFromRecycleBin() {
 
 
 //  /*chapter7*/
-function handleClick() {
-    alert("You clicked the 'Click Me!' button!");
-}
+// function handleClick() {
+//     alert("You clicked the 'Click Me!' button!");
+// }
 
-function handleHover() {
-    document.getElementById("hover-event").style.backgroundColor = "yellow";
-}
+// function handleHover() {
+//     document.getElementById("hover-event").style.backgroundColor = "yellow";
+// }
 
-function handleMouseOut() {
-    document.getElementById("hover-event").style.backgroundColor = "white";
-}
+// function handleMouseOut() {
+//     document.getElementById("hover-event").style.backgroundColor = "white";
+// }
 
-// Handle keydown event
-function handleKeyDown() {
-    var inputText = document.getElementById("key-input").value;
-    if(inputText) {
-        document.getElementById("event-message").textContent = "You typed (keydown): " + inputText;
-    }
-}
+// // Handle keydown event
+// function handleKeyDown() {
+//     var inputText = document.getElementById("key-input").value;
+//     if(inputText) {
+//         document.getElementById("event-message").textContent = "You typed (keydown): " + inputText;
+//     }
+// }
 
-// Handle keypress event
-function handleKeyPress() {
-    var inputText = document.getElementById("key-input").value;
-    if(inputText) {
-        document.getElementById("event-message").textContent = "You typed (keypress): " + inputText;
-    }
-}
+// // Handle keypress event
+// function handleKeyPress() {
+//     var inputText = document.getElementById("key-input").value;
+//     if(inputText) {
+//         document.getElementById("event-message").textContent = "You typed (keypress): " + inputText;
+//     }
+// }
 
-// Handle keyup event
-function handleKeyUp() {
-    var inputText = document.getElementById("key-input").value;
-    if(inputText) {
-        document.getElementById("event-message").textContent = "You typed (keyup): " + inputText;
-    }
-}
+// // Handle keyup event
+// function handleKeyUp() {
+//     var inputText = document.getElementById("key-input").value;
+//     if(inputText) {
+//         document.getElementById("event-message").textContent = "You typed (keyup): " + inputText;
+//     }
+// }
 
-function showItemType(itemName) {
-    alert("You selected " + itemName); 
-}
+// function showItemType(itemName) {
+//     alert("You selected " + itemName); 
+// }
+
+
+
 
 
